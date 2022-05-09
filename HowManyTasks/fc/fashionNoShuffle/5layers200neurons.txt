@@ -1,0 +1,38 @@
+Training model for 2 tasks
+Accuracies: [0.8707, 0.8803]
+Model Converged
+
+
+Training model for 3 tasks
+Accuracies: [0.8709, 0.8735, 0.8843]
+Model Converged
+
+
+Training model for 4 tasks
+Accuracies: [0.867, 0.8716, 0.8747, 0.8868]
+Model Converged
+
+
+Training model for 5 tasks
+Accuracies: [0.8578, 0.8637, 0.8613, 0.8668, 0.8871]
+Model Converged
+
+
+Training model for 6 tasks
+Accuracies: [0.8662, 0.8661, 0.8702, 0.8722, 0.8703, 0.8787]
+Model Converged
+
+
+Training model for 7 tasks
+Accuracies: [0.8611, 0.8614, 0.8649, 0.8718, 0.8743, 0.8692, 0.8812]
+Model Converged
+
+
+Training model for 8 tasks
+Accuracies: [0.8612, 0.8654, 0.8645, 0.868, 0.8665, 0.8643, 0.8692, 0.8818]
+Model Converged
+
+
+Training model for 9 tasks
+Accuracies: [0.7452, 0.8598, 0.8638, 0.861, 0.87, 0.8687, 0.8684, 0.8655, 0.8875]
+Convergence failed at 9 tasks
