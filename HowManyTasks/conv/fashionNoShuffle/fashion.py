@@ -11,13 +11,22 @@ def build_task_data(num_tasks, x_train, y_train, x_test, y_test):
     test_y = [y_test]*num_tasks
     return (train_x, train_y), (test_x, test_y)
 
-def build_model(num_tasks, input_shape, output_shape, num_layers, num_neurons):
+def build_model(num_tasks, input_shape, output_shape, num_blocks, num_filters):
     input_layers = [
         tf.keras.layers.Input(input_shape) for _ in range(num_tasks)
     ]
-    x = mann.layers.MultiMaskedDense(num_neurons, activation = 'relu')(input_layers)
-    for _ in range(num_layers - 1):
-        x = mann.layers.MultiMaskedDense(num_neurons, activation = 'relu')(x)
+    x = mann.layers.MultiMaskedConv2D(num_filters, activation = 'relu')(input_layers)
+    x = mann.layers.MultiMaskedConv2D(num_filters, activation = 'relu')(x)
+    x = [mann.layers.SelectorLayer(i)(x) for i in range(num_tasks)]
+    x = [tf.keras.layers.MaxPool2D()(x[i]) for i in range(num_tasks)]
+    for i in range(num_blocks - 1):
+        x = mann.layers.MultiMaskedConv2D(num_filters * 2**(i + 1), activation = 'relu')(x)
+        x = mann.layers.MultiMaskedConv2D(num_filters * 2**(i + 1), activation = 'relu')(x)
+        x = [mann.layers.SelectorLayer(i)(x) for i in range(num_tasks)]
+        x = [tf.keras.layers.MaxPool2D()(x[i]) for i in range(num_tasks)]
+    x = [mann.layers.SelectorLayer(i)(x) for i in range(num_tasks)]
+    x = [tf.keras.layers.Flatten()(x[i]) for i in range(num_tasks)]
+    x = mann.layers.MultiMaskedDense(num_filters * 4, activation = 'relu')(x)
     output_layer = mann.layers.MultiMaskedDense(output_shape, activation = 'softmax')(x)
 
     model = tf.keras.models.Model(input_layers, output_layer)
@@ -29,16 +38,16 @@ def build_model(num_tasks, input_shape, output_shape, num_layers, num_neurons):
     return model
 
 @click.command()
-@click.option('--num-layers', '-l', type = int, default = 5)
-@click.option('--num-neurons', '-n', type = int, default = 100)
-@click.option('--min-accuracy', '-a', type = float, default = 0.8)
-def main(num_layers, num_neurons, min_accuracy):
+@click.option('--num-blocks', '-l', type = int, default = 2)
+@click.option('--num-filters', '-n', type = int, default = 8)
+@click.option('--min-accuracy', '-a', type = float, default = 0.9)
+def main(num_blocks, num_filters, min_accuracy):
     num_tasks = 2
     keep_going = True
     
     (x_train, y_train), (x_test, y_test) = tf.keras.datasets.fashion_mnist.load_data()
-    x_train = x_train.reshape((x_train.shape[0], -1))/255
-    x_test = x_test.reshape((x_test.shape[0], -1))/255
+    x_train = x_train.reshape(x_train.shape + (1,))/255
+    x_test = x_test.reshape(x_test.shape + (1,))/255
     y_train = y_train.reshape(-1, 1)
     y_test = y_test.reshape(-1, 1)
 
@@ -56,8 +65,8 @@ def main(num_layers, num_neurons, min_accuracy):
             num_tasks,
             x_train.shape[1:],
             10,
-            num_layers,
-            num_neurons
+            num_blocks,
+            num_filters
         )
         x_subsets = [
             x[:100] for x in train_x
