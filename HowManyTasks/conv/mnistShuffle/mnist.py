@@ -61,8 +61,8 @@ def build_model(
     return model
 
 @click.command()
-@click.option('--num-blocks', '-l', type = int, default = 2)
-@click.option('--num-filters', '-n', type = int, default = 8)
+@click.option('--num-blocks', '-b', type = int, default = 2)
+@click.option('--num-filters', '-f', type = int, default = 8)
 @click.option('--min-accuracy', '-a', type = float, default = 0.8)
 def main(num_blocks, num_filters, min_accuracy):
     num_tasks = 2
