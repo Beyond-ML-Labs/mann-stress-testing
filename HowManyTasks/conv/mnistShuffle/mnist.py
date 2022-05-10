@@ -12,7 +12,7 @@ def build_task_data(num_tasks, x_train, y_train, x_test, y_test):
     test_y = [y_test]*num_tasks
 
     for i in range(num_tasks - 1):
-        indices = np.arange(x_train.shape[-1])
+        indices = np.arange(x_train.shape[1:])
         np.random.shuffle(indices)
         train_x.append(
             np.asarray([x[indices] for x in x_train])
