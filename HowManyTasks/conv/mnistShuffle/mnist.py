@@ -11,14 +11,17 @@ def build_task_data(num_tasks, x_train, y_train, x_test, y_test):
     test_x = [x_test]
     test_y = [y_test]*num_tasks
 
+    train_x_placeholder = x_train.reshape((x_train.shape[0], -1))
+    test_x_placeholder = x_train.reshape((x_test.shape[0], -1))
+
     for i in range(num_tasks - 1):
-        indices = np.arange(x_train.shape[1:])
+        indices = np.arange(train_x_placeholder.shape[-1])
         np.random.shuffle(indices)
         train_x.append(
-            np.asarray([x[indices] for x in x_train])
+            np.asarray([x[indices] for x in train_x_placeholder]).reshape((train_x_placeholder.shape[0], 28, 28, 1))
         )
         test_x.append(
-            np.asarray([x[indices] for x in x_test])
+            np.asarray([x[indices] for x in test_x_placeholder]).reshape((test_x_placeholder.shape[0], 28, 28, 1))
         )
     
     return (train_x, train_y), (test_x, test_y)
