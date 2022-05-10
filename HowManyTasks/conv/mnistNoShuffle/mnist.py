@@ -24,13 +24,13 @@ def build_model(
     x = mann.layers.MultiMaskedConv2D(num_filters, activation = 'relu')(input_layers)
     x = mann.layers.MultiMaskedConv2D(num_filters, activation = 'relu')(x)
     x = [mann.layers.SelectorLayer(i)(x) for i in range(num_tasks)]
-    x = [tf.keras.layers.MaxPool2D()(x[i]) for i in range(num_tasks)]
+    x = [tf.keras.layers.MaxPool2D(padding = 'same')(x[i]) for i in range(num_tasks)]
 
     for block in range(num_blocks - 1):
         x = mann.layers.MultiMaskedConv2D(num_filters * 2**(block + 1), activation = 'relu')(x)
         x = mann.layers.MultiMaskedConv2D(num_filters * 2**(block + 1), activation = 'relu')(x)
         x = [mann.layers.SelectorLayer(i)(x) for i in range(num_tasks)]
-        x = [tf.keras.layers.MaxPool2D()(x[i]) for i in range(num_tasks)]
+        x = [tf.keras.layers.MaxPool2D(padding = 'same')(x[i]) for i in range(num_tasks)]
 
     x = [mann.layers.SelectorLayer(i)(x) for i in range(num_tasks)]
     x = [tf.keras.layers.Flatten()(x[i]) for i in range(num_tasks)]
