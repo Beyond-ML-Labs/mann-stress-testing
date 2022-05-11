@@ -1,1 +1,7 @@
-python ./fashion.py -b 2 -f 8 > ./2blocks8filters.txt && python ./fashion.py -b 4 -f 8 > ./4blocks8filters.txt && python ./fashion.py -b 6 -f 8 > ./6blocks8filters.txt && ./fashion.py -b 2 -f 16 > ./2blocks16filters.txt && python ./fashion.py -b 4 -f 16 > ./4blocks16filters.txt && python ./fashion.py -b 6 -f 16 > ./6blocks16filters.py && python ./fashion.py -b 2 -f 32 > ./2blocks32filters.txt && python ./fashion.py -b 4 -f 32 > ./4blocks32filters.txt && python ./fashion.py -b 6 -f 32 > ./6blocks32filters.txt
+for block in 2 4 6
+do
+    for filter in 8 16 32
+    do
+	python ./fashion.py -b $block -f $filter > ./${block}blocks${filter}filters.txt
+    done
+done
