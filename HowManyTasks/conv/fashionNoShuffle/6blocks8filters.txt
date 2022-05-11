@@ -1,0 +1,3 @@
+Training model for 2 tasks
+Accuracies: [0.8892, 0.1]
+Convergence failed at 2 tasks
