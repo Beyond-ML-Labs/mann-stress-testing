@@ -47,7 +47,8 @@ def main(limit):
         validation_split = 0.2,
         epochs = 100,
         batch_size = 512,
-        callbacks = [callback]
+        callbacks = [callback],
+        verbose = 2
     )
     print('\n')
     print('Control Results:')
@@ -60,7 +61,8 @@ def main(limit):
     one_shot_model = build_model(x_train.shape[1:], use_mann_layers = True)
     one_shot_model.fit(
         x_train[:1000],
-        y_train[:1000]
+        y_train[:1000],
+        verbose = 2
     )
     one_shot_model = mann.utils.mask_model(
         one_shot_model,
@@ -78,7 +80,8 @@ def main(limit):
         validation_split = 0.2,
         epochs = 100,
         batch_size = 512,
-        callbacks = [callback]
+        callbacks = [callback],
+        verbose = 2
     )
     print('\n')
     print('One Shot Results:')
@@ -97,7 +100,8 @@ def main(limit):
     iterative_model = build_model(x_train.shape[1:], use_mann_layers = True)
     iterative_model.fit(
         x_train[:1000],
-        y_train[:1000]
+        y_train[:1000],
+        verbose = 2
     )
     iterative_model = mann.utils.mask_model(
         iterative_model,
@@ -115,7 +119,8 @@ def main(limit):
         validation_split = 0.2,
         epochs = 100,
         batch_size = 512,
-        callbacks = [active_callback]
+        callbacks = [active_callback],
+        verbose = 2
     )
     print('\n')
     print('Iterative Results:')
