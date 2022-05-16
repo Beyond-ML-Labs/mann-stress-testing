@@ -1,0 +1,261 @@
+0    6000
+1    6000
+2    6000
+4    6000
+5    6000
+6    6000
+7    6000
+8    6000
+9    6000
+3    4800
+dtype: int64
+Epoch 1/100
+92/92 - 21s - loss: 1.4124 - accuracy: 0.6016 - val_loss: 0.7272 - val_accuracy: 0.7296 - 21s/epoch - 227ms/step
+Epoch 2/100
+92/92 - 19s - loss: 0.6078 - accuracy: 0.7828 - val_loss: 0.5064 - val_accuracy: 0.8359 - 19s/epoch - 210ms/step
+Epoch 3/100
+92/92 - 19s - loss: 0.4380 - accuracy: 0.8513 - val_loss: 0.4371 - val_accuracy: 0.8532 - 19s/epoch - 206ms/step
+Epoch 4/100
+92/92 - 20s - loss: 0.3769 - accuracy: 0.8693 - val_loss: 0.3960 - val_accuracy: 0.8625 - 20s/epoch - 212ms/step
+Epoch 5/100
+92/92 - 19s - loss: 0.3386 - accuracy: 0.8812 - val_loss: 0.3771 - val_accuracy: 0.8723 - 19s/epoch - 211ms/step
+Epoch 6/100
+92/92 - 20s - loss: 0.3121 - accuracy: 0.8905 - val_loss: 0.3713 - val_accuracy: 0.8714 - 20s/epoch - 213ms/step
+Epoch 7/100
+92/92 - 20s - loss: 0.2906 - accuracy: 0.8970 - val_loss: 0.3573 - val_accuracy: 0.8758 - 20s/epoch - 214ms/step
+Epoch 8/100
+92/92 - 18s - loss: 0.2749 - accuracy: 0.9023 - val_loss: 0.3572 - val_accuracy: 0.8764 - 18s/epoch - 198ms/step
+Epoch 9/100
+92/92 - 20s - loss: 0.2625 - accuracy: 0.9087 - val_loss: 0.3486 - val_accuracy: 0.8808 - 20s/epoch - 214ms/step
+Epoch 10/100
+92/92 - 19s - loss: 0.2463 - accuracy: 0.9119 - val_loss: 0.3531 - val_accuracy: 0.8763 - 19s/epoch - 211ms/step
+Epoch 11/100
+92/92 - 19s - loss: 0.2340 - accuracy: 0.9160 - val_loss: 0.3352 - val_accuracy: 0.8847 - 19s/epoch - 212ms/step
+Epoch 12/100
+92/92 - 19s - loss: 0.2180 - accuracy: 0.9213 - val_loss: 0.3710 - val_accuracy: 0.8745 - 19s/epoch - 211ms/step
+Epoch 13/100
+92/92 - 19s - loss: 0.2152 - accuracy: 0.9235 - val_loss: 0.3421 - val_accuracy: 0.8821 - 19s/epoch - 206ms/step
+Epoch 14/100
+92/92 - 19s - loss: 0.2012 - accuracy: 0.9277 - val_loss: 0.3401 - val_accuracy: 0.8827 - 19s/epoch - 210ms/step
+
+
+Control Results:
+[[839   4  32  20   4   1  92   0   8   0]
+ [  3 966   2  16   6   0   5   0   2   0]
+ [ 18   0 794   6  93   0  84   0   5   0]
+ [ 19   9  17 858  45   0  42   0  10   0]
+ [  1   1  53  15 841   0  85   0   4   0]
+ [  0   0   0   0   0 978   0   9   4   9]
+ [131   1  84  22  79   0 660   0  23   0]
+ [  0   0   0   0   0  50   0 895   4  51]
+ [  4   0   8   2   2   8   7   0 969   0]
+ [  0   0   1   0   0   8   0  22   3 966]]
+              precision    recall  f1-score   support
+
+           0       0.83      0.84      0.83      1000
+           1       0.98      0.97      0.98      1000
+           2       0.80      0.79      0.80      1000
+           3       0.91      0.86      0.88      1000
+           4       0.79      0.84      0.81      1000
+           5       0.94      0.98      0.96      1000
+           6       0.68      0.66      0.67      1000
+           7       0.97      0.90      0.93      1000
+           8       0.94      0.97      0.95      1000
+           9       0.94      0.97      0.95      1000
+
+    accuracy                           0.88     10000
+   macro avg       0.88      0.88      0.88     10000
+weighted avg       0.88      0.88      0.88     10000
+
+
+
+32/32 - 3s - loss: 1.2503 - accuracy: 0.5650 - 3s/epoch - 92ms/step
+Epoch 1/100
+92/92 - 36s - loss: 1.3599 - accuracy: 0.4553 - val_loss: 0.8843 - val_accuracy: 0.5517 - 36s/epoch - 396ms/step
+Epoch 2/100
+92/92 - 18s - loss: 0.8203 - accuracy: 0.5660 - val_loss: 0.7614 - val_accuracy: 0.5802 - 18s/epoch - 201ms/step
+Epoch 3/100
+92/92 - 18s - loss: 0.7501 - accuracy: 0.5845 - val_loss: 0.7284 - val_accuracy: 0.5856 - 18s/epoch - 191ms/step
+Epoch 4/100
+92/92 - 18s - loss: 0.7143 - accuracy: 0.5929 - val_loss: 0.6957 - val_accuracy: 0.5952 - 18s/epoch - 198ms/step
+Epoch 5/100
+92/92 - 19s - loss: 0.6930 - accuracy: 0.5981 - val_loss: 0.6786 - val_accuracy: 0.6013 - 19s/epoch - 202ms/step
+Epoch 6/100
+92/92 - 24s - loss: 0.6752 - accuracy: 0.6027 - val_loss: 0.6689 - val_accuracy: 0.6056 - 24s/epoch - 260ms/step
+Epoch 7/100
+92/92 - 32s - loss: 0.6600 - accuracy: 0.6071 - val_loss: 0.6628 - val_accuracy: 0.6031 - 32s/epoch - 348ms/step
+Epoch 8/100
+92/92 - 32s - loss: 0.6484 - accuracy: 0.6097 - val_loss: 0.6698 - val_accuracy: 0.5996 - 32s/epoch - 351ms/step
+Epoch 9/100
+92/92 - 33s - loss: 0.6390 - accuracy: 0.6111 - val_loss: 0.6465 - val_accuracy: 0.6122 - 33s/epoch - 353ms/step
+Epoch 10/100
+92/92 - 32s - loss: 0.6302 - accuracy: 0.6143 - val_loss: 0.6483 - val_accuracy: 0.6070 - 32s/epoch - 350ms/step
+Epoch 11/100
+92/92 - 33s - loss: 0.6212 - accuracy: 0.6168 - val_loss: 0.6342 - val_accuracy: 0.6099 - 33s/epoch - 355ms/step
+Epoch 12/100
+92/92 - 32s - loss: 0.6152 - accuracy: 0.6166 - val_loss: 0.6328 - val_accuracy: 0.6147 - 32s/epoch - 352ms/step
+Epoch 13/100
+92/92 - 33s - loss: 0.6107 - accuracy: 0.6183 - val_loss: 0.6264 - val_accuracy: 0.6164 - 33s/epoch - 362ms/step
+Epoch 14/100
+92/92 - 33s - loss: 0.6063 - accuracy: 0.6194 - val_loss: 0.6221 - val_accuracy: 0.6162 - 33s/epoch - 362ms/step
+
+
+One Shot Results:
+[[807   1  34  31   0   1 126   0   0   0]
+ [  2 967   2  24   0   0   5   0   0   0]
+ [ 12   1 832  13   0   0 142   0   0   0]
+ [ 20  15  25 880   0   0  60   0   0   0]
+ [  1   1 694  52   0   0 252   0   0   0]
+ [  0   0   2   0   0 978   0  20   0   0]
+ [139   1 130  27   0   0 703   0   0   0]
+ [  0   0  12   0   0  49   0 939   0   0]
+ [  3   2 943  11   0   9  26   6   0   0]
+ [  0   0 886   1   0  25   4  84   0   0]]
+              precision    recall  f1-score   support
+
+           0       0.82      0.81      0.81      1000
+           1       0.98      0.97      0.97      1000
+           2       0.23      0.83      0.36      1000
+           3       0.85      0.88      0.86      1000
+           4       0.00      0.00      0.00      1000
+           5       0.92      0.98      0.95      1000
+           6       0.53      0.70      0.61      1000
+           7       0.90      0.94      0.92      1000
+           8       0.00      0.00      0.00      1000
+           9       0.00      0.00      0.00      1000
+
+    accuracy                           0.61     10000
+   macro avg       0.52      0.61      0.55     10000
+weighted avg       0.52      0.61      0.55     10000
+
+
+
+32/32 - 3s - loss: 1.5885 - accuracy: 0.4360 - 3s/epoch - 82ms/step
+Epoch 1/100
+Performance measure set to val_accuracy
+Model performance reached 0.84, sparsifying to 55
+92/92 - 34s - loss: 0.6013 - accuracy: 0.7795 - val_loss: 0.4473 - val_accuracy: 0.8435 - 34s/epoch - 373ms/step
+Epoch 2/100
+Model performance reached 0.86, sparsifying to 60
+92/92 - 33s - loss: 0.4228 - accuracy: 0.8517 - val_loss: 0.3850 - val_accuracy: 0.8632 - 33s/epoch - 358ms/step
+Epoch 3/100
+Model performance reached 0.88, sparsifying to 65
+92/92 - 33s - loss: 0.3542 - accuracy: 0.8750 - val_loss: 0.3558 - val_accuracy: 0.8751 - 33s/epoch - 361ms/step
+Epoch 4/100
+Model performance reached 0.88, sparsifying to 70
+92/92 - 33s - loss: 0.3491 - accuracy: 0.8772 - val_loss: 0.3301 - val_accuracy: 0.8792 - 33s/epoch - 358ms/step
+Epoch 5/100
+Model performance reached 0.89, sparsifying to 75
+92/92 - 33s - loss: 0.3427 - accuracy: 0.8785 - val_loss: 0.3219 - val_accuracy: 0.8887 - 33s/epoch - 361ms/step
+Epoch 6/100
+Model performance reached 0.88, sparsifying to 80
+92/92 - 32s - loss: 0.4274 - accuracy: 0.8545 - val_loss: 0.3404 - val_accuracy: 0.8839 - 32s/epoch - 353ms/step
+Epoch 7/100
+Model performance reached 0.88, sparsifying to 85
+92/92 - 33s - loss: 0.4632 - accuracy: 0.8376 - val_loss: 0.3602 - val_accuracy: 0.8788 - 33s/epoch - 358ms/step
+Epoch 8/100
+Model performance reached 0.87, sparsifying to 90
+92/92 - 33s - loss: 0.4859 - accuracy: 0.8339 - val_loss: 0.3904 - val_accuracy: 0.8691 - 33s/epoch - 361ms/step
+Epoch 9/100
+Model performance has not reached pruning threshold for 1 epoch(s)
+92/92 - 27s - loss: 0.6306 - accuracy: 0.7659 - val_loss: 0.4715 - val_accuracy: 0.8247 - 27s/epoch - 293ms/step
+Epoch 10/100
+Model performance reached 0.86, sparsifying to 95
+92/92 - 27s - loss: 0.4270 - accuracy: 0.8480 - val_loss: 0.4041 - val_accuracy: 0.8565 - 27s/epoch - 294ms/step
+Epoch 11/100
+Model performance has not reached pruning threshold for 1 epoch(s)
+92/92 - 34s - loss: 1.2399 - accuracy: 0.4841 - val_loss: 0.9799 - val_accuracy: 0.5380 - 34s/epoch - 374ms/step
+Epoch 12/100
+Model performance has not reached pruning threshold for 2 epoch(s)
+92/92 - 35s - loss: 0.9530 - accuracy: 0.5375 - val_loss: 0.9121 - val_accuracy: 0.5493 - 35s/epoch - 376ms/step
+Epoch 13/100
+Model performance has not reached pruning threshold for 3 epoch(s)
+92/92 - 34s - loss: 0.9006 - accuracy: 0.5456 - val_loss: 0.8797 - val_accuracy: 0.5544 - 34s/epoch - 374ms/step
+Epoch 14/100
+Model performance has not reached pruning threshold for 4 epoch(s)
+92/92 - 34s - loss: 0.8731 - accuracy: 0.5502 - val_loss: 0.8601 - val_accuracy: 0.5549 - 34s/epoch - 370ms/step
+Epoch 15/100
+Model performance has not reached pruning threshold for 5 epoch(s)
+Model performance has not reached pruning threshold for 5 epochs, reverting to 90 sparsification and beginning early stopping
+92/92 - 34s - loss: 0.8542 - accuracy: 0.5527 - val_loss: 0.8449 - val_accuracy: 0.5564 - 34s/epoch - 372ms/step
+Epoch 16/100
+Model performance improved to 0.87
+92/92 - 35s - loss: 0.3753 - accuracy: 0.8673 - val_loss: 0.3748 - val_accuracy: 0.8661 - 35s/epoch - 376ms/step
+Epoch 17/100
+Model performance improved to 0.88
+92/92 - 34s - loss: 0.3431 - accuracy: 0.8789 - val_loss: 0.3514 - val_accuracy: 0.8776 - 34s/epoch - 374ms/step
+Epoch 18/100
+Model performance improved to 0.88
+92/92 - 34s - loss: 0.3254 - accuracy: 0.8856 - val_loss: 0.3363 - val_accuracy: 0.8832 - 34s/epoch - 374ms/step
+Epoch 19/100
+Early stopping performance has not met threshold for 1 epochs
+92/92 - 34s - loss: 0.3088 - accuracy: 0.8905 - val_loss: 0.3293 - val_accuracy: 0.8849 - 34s/epoch - 370ms/step
+Epoch 20/100
+Early stopping performance has not met threshold for 2 epochs
+92/92 - 35s - loss: 0.2996 - accuracy: 0.8949 - val_loss: 0.3206 - val_accuracy: 0.8865 - 35s/epoch - 376ms/step
+Epoch 21/100
+Model performance improved to 0.89
+92/92 - 34s - loss: 0.2893 - accuracy: 0.8988 - val_loss: 0.3185 - val_accuracy: 0.8911 - 34s/epoch - 372ms/step
+Epoch 22/100
+Early stopping performance has not met threshold for 1 epochs
+92/92 - 34s - loss: 0.2801 - accuracy: 0.9014 - val_loss: 0.3117 - val_accuracy: 0.8913 - 34s/epoch - 375ms/step
+Epoch 23/100
+Early stopping performance has not met threshold for 2 epochs
+92/92 - 34s - loss: 0.2748 - accuracy: 0.9033 - val_loss: 0.3083 - val_accuracy: 0.8941 - 34s/epoch - 370ms/step
+Epoch 24/100
+Early stopping performance has not met threshold for 3 epochs
+92/92 - 34s - loss: 0.2669 - accuracy: 0.9069 - val_loss: 0.3061 - val_accuracy: 0.8939 - 34s/epoch - 371ms/step
+Epoch 25/100
+Early stopping performance has not met threshold for 4 epochs
+92/92 - 34s - loss: 0.2616 - accuracy: 0.9069 - val_loss: 0.3025 - val_accuracy: 0.8957 - 34s/epoch - 374ms/step
+Epoch 26/100
+Model performance improved to 0.9
+92/92 - 34s - loss: 0.2555 - accuracy: 0.9092 - val_loss: 0.2975 - val_accuracy: 0.8963 - 34s/epoch - 373ms/step
+Epoch 27/100
+Early stopping performance has not met threshold for 1 epochs
+92/92 - 34s - loss: 0.2486 - accuracy: 0.9114 - val_loss: 0.2970 - val_accuracy: 0.8978 - 34s/epoch - 375ms/step
+Epoch 28/100
+Early stopping performance has not met threshold for 2 epochs
+92/92 - 17s - loss: 0.2449 - accuracy: 0.9126 - val_loss: 0.2937 - val_accuracy: 0.8981 - 17s/epoch - 187ms/step
+Epoch 29/100
+Early stopping performance has not met threshold for 3 epochs
+92/92 - 23s - loss: 0.2408 - accuracy: 0.9135 - val_loss: 0.3041 - val_accuracy: 0.8952 - 23s/epoch - 250ms/step
+Epoch 30/100
+Early stopping performance has not met threshold for 4 epochs
+92/92 - 34s - loss: 0.2368 - accuracy: 0.9146 - val_loss: 0.2905 - val_accuracy: 0.9003 - 34s/epoch - 365ms/step
+Epoch 31/100
+Early stopping performance has not met threshold for 5 epochs
+Model performance has not met early stopping criteria. Stopping training
+92/92 - 34s - loss: 0.2321 - accuracy: 0.9169 - val_loss: 0.2904 - val_accuracy: 0.8993 - 34s/epoch - 371ms/step
+
+
+Iterative Results:
+[[850   3  19  23   8   3  84   0  10   0]
+ [  1 981   2  11   2   0   2   0   1   0]
+ [ 16   1 854  11  76   0  42   0   0   0]
+ [ 18  11  12 897  26   0  31   0   5   0]
+ [  1   1  58  34 850   0  56   0   0   0]
+ [  0   0   0   1   0 971   0  17   1  10]
+ [137   5  74  27  90   0 653   0  14   0]
+ [  0   0   0   0   0  14   0 957   1  28]
+ [  2   1   5   3   3   2   7   4 973   0]
+ [  0   0   0   0   0   8   0  27   1 964]]
+              precision    recall  f1-score   support
+
+           0       0.83      0.85      0.84      1000
+           1       0.98      0.98      0.98      1000
+           2       0.83      0.85      0.84      1000
+           3       0.89      0.90      0.89      1000
+           4       0.81      0.85      0.83      1000
+           5       0.97      0.97      0.97      1000
+           6       0.75      0.65      0.70      1000
+           7       0.95      0.96      0.95      1000
+           8       0.97      0.97      0.97      1000
+           9       0.96      0.96      0.96      1000
+
+    accuracy                           0.90     10000
+   macro avg       0.89      0.89      0.89     10000
+weighted avg       0.89      0.90      0.89     10000
+
+
+
